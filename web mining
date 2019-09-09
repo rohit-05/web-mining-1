@@ -1,0 +1,47 @@
+import requests
+#Google search for the term "Tim Berners-Lee".
+url1 = "https://www.google.com/search"
+pram = {'q' : 'Tim Berners-Lee'}
+req1 = requests.get(url1, params = pram)
+print(req1.status_code)
+print(req1.headers)
+print(req1.content)
+
+
+
+#POST request to a website that does not accept POST requests.
+url2 = "https://www.wix.com"
+DATA = {'postData' : 'postRequest'}
+req2 = requests.post(url2 , data= DATA)
+print(req2.status_code)
+print(req2.headers)
+print(req2.content)
+
+
+#Request to a URL that does not exist.    
+url3 = "https://www.rbhardwaj.com"
+req3 = requests.get(url3)
+print(req3.status_code)
+print(req3.headers)
+print(req3.content)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
